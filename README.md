@@ -162,31 +162,6 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
 
 **Result:** API Gateway connected with all Lambda functions.
 
----
-<img width="1919" height="977" alt="Screenshot 2025-10-18 135748" src="https://github.com/user-attachments/assets/347aedfc-cd0e-436d-aed8-08b07cd2f493" />
-
----
-<img width="1919" height="973" alt="Screenshot 2025-10-18 140759" src="https://github.com/user-attachments/assets/7cdb514a-40f6-47a0-9a5a-f81ce9907d75" />
-
----
-<img width="1919" height="972" alt="Screenshot 2025-10-18 140851" src="https://github.com/user-attachments/assets/a81421a8-8ebc-4644-9df7-f8bb70806545" />
-
----
-<img width="1919" height="977" alt="Screenshot 2025-10-18 141118" src="https://github.com/user-attachments/assets/dfb85f9f-21fe-4718-8695-b9f7a2832c53" />
-
----
-<img width="1919" height="960" alt="Screenshot 2025-10-18 142222" src="https://github.com/user-attachments/assets/530dbc20-7e54-48e1-876a-1cbf9eeb5373" />
-
----
-<img width="1919" height="978" alt="Screenshot 2025-10-18 142339" src="https://github.com/user-attachments/assets/9689154d-ebe4-453b-a35a-de65ee3a7b76" />
-
----
-<img width="1919" height="974" alt="Screenshot 2025-10-18 142549" src="https://github.com/user-attachments/assets/0c919956-0d96-4930-b6af-516405a3f123" />
-
-
-
-
-
 
 
 ---
@@ -200,6 +175,11 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
   ```
   https://<api-id>.execute-api.<region>.amazonaws.com/prod
   ```
+  ---
+  <img width="1919" height="959" alt="Screenshot 2025-10-18 142659" src="https://github.com/user-attachments/assets/acb0ae97-5cb8-4654-86c6-fae5d226a016" />
+  
+  ---
+
 
 **Result:** Public API endpoints are now live and callable from Postman.
 
@@ -216,6 +196,24 @@ Use the following endpoints:
 | **PUT** | `/items/{id}` | Update an item | `{ "name": "Updated Item", "description": "Modified" }` |
 | **DELETE** | `/items/{id}` | Delete an item | — |
 
+
+---
+<img width="1439" height="1014" alt="Screenshot 2025-10-18 170917" src="https://github.com/user-attachments/assets/d246ffe9-9eb1-408d-8288-274de511aadc" />
+
+---
+<img width="1443" height="971" alt="Screenshot 2025-10-18 170932" src="https://github.com/user-attachments/assets/9b5f9702-a553-4b39-9357-de95871b32df" />
+
+---
+<img width="1447" height="963" alt="Screenshot 2025-10-18 170942" src="https://github.com/user-attachments/assets/11e44971-d427-40b2-8536-7b0533cd0d4e" />
+
+---
+<img width="1441" height="968" alt="Screenshot 2025-10-18 170949" src="https://github.com/user-attachments/assets/414cf88e-1499-4f03-af89-55d78a3a2b47" />
+
+---
+
+
+
+
 **Result:** All CRUD operations returned correct responses and updated DynamoDB successfully.
 
 ---
@@ -228,61 +226,18 @@ Use the following endpoints:
 
 **Result:** Monitoring and alerting integrated successfully.
 
----
-
-### **8️⃣ (Optional) Infrastructure as Code**
-
-You can automate all resources using:
-- **AWS SAM Template**
-- **Terraform**
-- **CloudFormation Stack**
-
-✅ **Result:** Reproducible, automated setup.
-
----
-
-## 🧱 Architecture Diagram
-
-Below is the final simplified architecture diagram:
-
-```
-Client (Postman / Browser)
-    ↓
-API Gateway (prod)
-    ↓
-Lambda (Create / Read / Update / Delete)
-    ↓
-DynamoDB (ItemsTable)
-    ↓
-CloudWatch Logs & SNS Alerts
-```
 
 ---
 
 ## Project Highlights
 
-✅ 100% Serverless (no servers or EC2 required)  
-✅ Pay-per-use pricing  
-✅ Scalable CRUD API  
-✅ Clean IAM-based security  
-✅ Tested with Postman  
-✅ Observable with CloudWatch  
+1) 100% Serverless (no servers or EC2 required)  
+2) Pay-per-use pricing  
+3) Scalable CRUD API  
+4) Clean IAM-based security  
+5) Tested with Postman  
+6) Observable with CloudWatch  
 
----
-
-## Example Response
-
-**POST /items**
-```json
-{
-  "message": "Item created successfully!",
-  "item": {
-    "id": "1009b968-52f2-46a3-bc5a-276b0112ed89",
-    "name": "Postman Test Item",
-    "description": "Created via Postman"
-  }
-}
-```
 
 ---
 
@@ -296,22 +251,8 @@ CloudWatch Logs & SNS Alerts
 
 ---
 
-## Repository Structure
-
-```
-aws-serverless-crud-api/
-│
-├── create_item.py
-├── get_items.py
-├── update_item.py
-├── delete_item.py
-├── README.md
-├── architecture.png
-└── diagram.mmd
-```
-
 
 
 ---
 
-⭐ **If you found this project helpful, give it a star on GitHub!**
+⭐ **If you found this project helpful, give it a star!**
