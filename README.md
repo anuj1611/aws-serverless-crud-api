@@ -41,7 +41,7 @@ Below is the **exact workflow** we followed to build this project from scratch:
 
 ---
 
-### **1️⃣ Create the DynamoDB Table**
+### **1️) Create the DynamoDB Table**
 
 - Go to **AWS Console → DynamoDB → Create Table**
 - Table name: `ItemsTable`
@@ -218,7 +218,7 @@ Use the following endpoints:
 
 ---
 
-### **7️⃣ Add Monitoring & Alerts**
+### **7️) Add Monitoring & Alerts**
 
 - **CloudWatch Logs:** Automatically receives Lambda logs.
 - **CloudWatch Alarms:** Send alerts for failures or high latency.
@@ -248,9 +248,6 @@ Use the following endpoints:
 - Understood **DynamoDB CRUD operations using boto3**  
 - Practiced **API testing with Postman**  
 - Created a **scalable, production-ready serverless system**
-
----
-
 
 
 ---
