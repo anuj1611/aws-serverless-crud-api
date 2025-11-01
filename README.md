@@ -30,10 +30,15 @@ DynamoDB (ItemsTable)
    ↓
 CloudWatch (Logs & Metrics)
 ```
+---
 <img width="1536" height="1024" alt="AWS CRUD API high level arcitecture diagram" src="https://github.com/user-attachments/assets/746f3881-2e52-4edf-acbb-b595b12bb7bc" />
 
 
 ---
+<img width="1718" height="688" alt="AWS CRUD API Detailed arcitecture diagram" src="https://github.com/user-attachments/assets/a9049c03-4fd3-4272-9f56-c13b9b3f2cb7" />
+
+---
+
 
 ## Step-by-Step Workflow
 
@@ -62,7 +67,7 @@ Below is the **exact workflow** we followed to build this project from scratch:
 
 ---
 
-### **2️⃣ Create IAM Role for Lambda**
+### **2️) Create IAM Role for Lambda**
 
 - Go to **IAM → Roles → Create Role**
 - Trusted entity type: **AWS Service**
@@ -86,7 +91,7 @@ Below is the **exact workflow** we followed to build this project from scratch:
 
 ---
 
-### **3️⃣ Create Lambda Functions**
+### **3️) Create Lambda Functions**
 
 We created **4 Lambda functions**, one for each CRUD operation.
 
@@ -124,7 +129,7 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
 
 ---
 
-### **4️⃣ Connect API Gateway to Lambda**
+### **4️) Connect API Gateway to Lambda**
 
 - Go to **API Gateway → Create API → REST API**
 - Create a new **Resource** named `/items`
@@ -166,7 +171,7 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
 
 ---
 
-### **5️⃣ Deploy the API**
+### **5️) Deploy the API**
 
 - Go to **Actions → Deploy API**
 - Create a new stage named **prod**
@@ -185,7 +190,7 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
 
 ---
 
-### **6️⃣ Test Using Postman**
+### **6️) Test Using Postman**
 
 Use the following endpoints:
 
