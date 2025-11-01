@@ -1,11 +1,11 @@
-# 🚀 Serverless CRUD Application using AWS Lambda, API Gateway & DynamoDB
+# Serverless CRUD Application using AWS Lambda, API Gateway & DynamoDB
 
 This project demonstrates how to build a **fully serverless, scalable, and pay-per-use CRUD REST API** using **AWS Lambda**, **Amazon API Gateway**, and **Amazon DynamoDB**.  
 It supports Create, Read, Update, and Delete operations, all triggered through API endpoints.
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 - **AWS Lambda** – Serverless compute for executing backend logic.
 - **Amazon API Gateway** – To expose RESTful API endpoints.
@@ -17,7 +17,7 @@ It supports Create, Read, Update, and Delete operations, all triggered through A
 
 ---
 
-## 🗂️ Project Architecture Overview
+## Project Architecture Overview
 
 ### High-Level Flow:
 ```
@@ -34,7 +34,7 @@ CloudWatch (Logs & Metrics)
 
 ---
 
-## ⚙️ Step-by-Step Workflow
+## Step-by-Step Workflow
 
 Below is the **exact workflow** we followed to build this project from scratch:
 
@@ -48,7 +48,7 @@ Below is the **exact workflow** we followed to build this project from scratch:
 - Keep other settings as default (On-Demand capacity)
 - Click **Create Table**
 
-✅ **Result:** DynamoDB table ready to store items.
+**Result:** DynamoDB table ready to store items.
 
 ---
 
@@ -63,7 +63,7 @@ Below is the **exact workflow** we followed to build this project from scratch:
 - Name the role: `LambdaDynamoDBRole`
 - Click **Create Role**
 
-✅ **Result:** A secure role with DynamoDB & CloudWatch permissions created.
+**Result:** A secure role with DynamoDB & CloudWatch permissions created.
 
 ---
 
@@ -80,7 +80,7 @@ We created **4 Lambda functions**, one for each CRUD operation.
 
 Each Lambda uses **Python (boto3)** to interact with DynamoDB.
 
-✅ **Result:** All Lambda functions tested successfully inside AWS Lambda Console.
+**Result:** All Lambda functions tested successfully inside AWS Lambda Console.
 
 ---
 
@@ -96,7 +96,7 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
   - `DELETE` → Integrate with `DeleteItemFunction`
 - Enable **Lambda Proxy Integration** for all.
 
-✅ **Result:** API Gateway connected with all Lambda functions.
+**Result:** API Gateway connected with all Lambda functions.
 
 ---
 
@@ -110,7 +110,7 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
   https://<api-id>.execute-api.<region>.amazonaws.com/prod
   ```
 
-✅ **Result:** Public API endpoints are now live and callable from Postman.
+**Result:** Public API endpoints are now live and callable from Postman.
 
 ---
 
@@ -125,7 +125,7 @@ Use the following endpoints:
 | **PUT** | `/items/{id}` | Update an item | `{ "name": "Updated Item", "description": "Modified" }` |
 | **DELETE** | `/items/{id}` | Delete an item | — |
 
-✅ **Result:** All CRUD operations returned correct responses and updated DynamoDB successfully.
+**Result:** All CRUD operations returned correct responses and updated DynamoDB successfully.
 
 ---
 
@@ -135,7 +135,7 @@ Use the following endpoints:
 - **CloudWatch Alarms:** Send alerts for failures or high latency.
 - **Amazon SNS (Optional):** For email notifications.
 
-✅ **Result:** Monitoring and alerting integrated successfully.
+**Result:** Monitoring and alerting integrated successfully.
 
 ---
 
@@ -168,7 +168,7 @@ CloudWatch Logs & SNS Alerts
 
 ---
 
-## 📊 Project Highlights
+## Project Highlights
 
 ✅ 100% Serverless (no servers or EC2 required)  
 ✅ Pay-per-use pricing  
@@ -179,7 +179,7 @@ CloudWatch Logs & SNS Alerts
 
 ---
 
-## 🧪 Example Response
+## Example Response
 
 **POST /items**
 ```json
@@ -195,7 +195,7 @@ CloudWatch Logs & SNS Alerts
 
 ---
 
-## 🧠 Learnings & Key Takeaways
+## Learnings & Key Takeaways
 
 - Gained hands-on experience with **AWS Lambda and API Gateway integration**  
 - Learned to manage **IAM roles & permissions** effectively  
@@ -205,7 +205,7 @@ CloudWatch Logs & SNS Alerts
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 aws-serverless-crud-api/
@@ -219,21 +219,7 @@ aws-serverless-crud-api/
 └── diagram.mmd
 ```
 
----
 
-## 🏁 Conclusion
-
-You’ve successfully built a **complete Serverless REST API** using AWS managed services — secure, scalable, and cost-efficient.  
-This project demonstrates the power of **Serverless Architecture** for real-world backend systems.
-
----
-
-## 📚 Author
-
-**Anuj Dhiraj Bhagat**  
-*Cloud & Software Developer*  
-📧 anuj@example.com  
-💻 GitHub: [@anujbhagat](https://github.com/anujbhagat)
 
 ---
 
