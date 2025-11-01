@@ -227,7 +227,7 @@ Use the following endpoints:
 
 - **CloudWatch Logs:** Automatically receives Lambda logs.
 - **CloudWatch Alarms:** Send alerts for failures or high latency.
-- **Amazon SNS (Optional):** For email notifications.
+- **Amazon SNS:** For email notifications.
 
 **Result:** Monitoring and alerting integrated successfully.
 
