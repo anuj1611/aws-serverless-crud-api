@@ -112,6 +112,9 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
 <img width="1919" height="969" alt="Screenshot 2025-10-18 133123" src="https://github.com/user-attachments/assets/cb8b0bf4-1e8c-4c13-85d8-e490b7a9b5bd" />
 
 ---
+<img width="1919" height="978" alt="Screenshot 2025-10-18 133804" src="https://github.com/user-attachments/assets/70d018ec-0175-4546-a23e-3a01aae54e5b" />
+
+---
 <img width="1919" height="976" alt="Screenshot 2025-10-18 133949" src="https://github.com/user-attachments/assets/0b70c21a-b5c6-4857-a350-8c1bc6432cf6" />
 
 ---
@@ -136,6 +139,33 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
 - Enable **Lambda Proxy Integration** for all.
 
 **Result:** API Gateway connected with all Lambda functions.
+
+---
+<img width="1919" height="977" alt="Screenshot 2025-10-18 135748" src="https://github.com/user-attachments/assets/347aedfc-cd0e-436d-aed8-08b07cd2f493" />
+
+---
+<img width="1919" height="973" alt="Screenshot 2025-10-18 140759" src="https://github.com/user-attachments/assets/7cdb514a-40f6-47a0-9a5a-f81ce9907d75" />
+
+---
+<img width="1919" height="972" alt="Screenshot 2025-10-18 140851" src="https://github.com/user-attachments/assets/a81421a8-8ebc-4644-9df7-f8bb70806545" />
+
+---
+<img width="1919" height="977" alt="Screenshot 2025-10-18 141118" src="https://github.com/user-attachments/assets/dfb85f9f-21fe-4718-8695-b9f7a2832c53" />
+
+---
+<img width="1919" height="960" alt="Screenshot 2025-10-18 142222" src="https://github.com/user-attachments/assets/530dbc20-7e54-48e1-876a-1cbf9eeb5373" />
+
+---
+<img width="1919" height="978" alt="Screenshot 2025-10-18 142339" src="https://github.com/user-attachments/assets/9689154d-ebe4-453b-a35a-de65ee3a7b76" />
+
+---
+<img width="1919" height="974" alt="Screenshot 2025-10-18 142549" src="https://github.com/user-attachments/assets/0c919956-0d96-4930-b6af-516405a3f123" />
+
+
+
+
+
+
 
 ---
 
