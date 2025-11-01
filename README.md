@@ -42,7 +42,7 @@ CloudWatch (Logs & Metrics)
 
 ## Step-by-Step Workflow
 
-Below is the **exact workflow** we followed to build this project from scratch:
+Below is the **exact workflow** I followed to build this project from scratch:
 
 ---
 
