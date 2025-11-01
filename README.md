@@ -50,7 +50,17 @@ Below is the **exact workflow** we followed to build this project from scratch:
 - Keep other settings as default (On-Demand capacity)
 - Click **Create Table**
 
+---
+<img width="1919" height="976" alt="Screenshot 2025-10-18 114328" src="https://github.com/user-attachments/assets/7a5a0ae4-4624-4624-8406-a06e5fdc80a6" />
+
+---
+
 **Result:** DynamoDB table ready to store items.
+---
+<img width="1919" height="971" alt="Screenshot 2025-10-18 114457" src="https://github.com/user-attachments/assets/092e88ca-5cfa-4b49-b45b-c598a79e7ecc" />
+
+
+---
 
 ---
 
