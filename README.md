@@ -231,12 +231,12 @@ Use the following endpoints:
 
 ## Project Highlights
 
-1) 100% Serverless (no servers or EC2 required)  
-2) Pay-per-use pricing  
-3) Scalable CRUD API  
-4) Clean IAM-based security  
-5) Tested with Postman  
-6) Observable with CloudWatch  
+- 100% Serverless (no servers or EC2 required)  
+- Pay-per-use pricing  
+- Scalable CRUD API  
+- Clean IAM-based security  
+- Tested with Postman  
+- Observable with CloudWatch  
 
 
 ---
