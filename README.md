@@ -75,6 +75,15 @@ Below is the **exact workflow** we followed to build this project from scratch:
 - Name the role: `LambdaDynamoDBRole`
 - Click **Create Role**
 
+---
+<img width="1919" height="979" alt="Screenshot 2025-10-18 122441" src="https://github.com/user-attachments/assets/6fc0a59c-b601-4a77-9ea1-3f8c8c19e997" />
+
+---
+<img width="1919" height="972" alt="Screenshot 2025-10-18 123033" src="https://github.com/user-attachments/assets/f8eb56da-e90f-43a7-9099-d524c0159713" />
+
+---
+
+
 **Result:** A secure role with DynamoDB & CloudWatch permissions created.
 
 ---
@@ -91,6 +100,24 @@ We created **4 Lambda functions**, one for each CRUD operation.
 | `DeleteItemFunction`   | Deletes an item by ID           | DELETE `/items/{id}` |
 
 Each Lambda uses **Python (boto3)** to interact with DynamoDB.
+
+---
+<img width="1919" height="969" alt="Screenshot 2025-10-18 123907" src="https://github.com/user-attachments/assets/38bcc3c5-6534-42d4-a52a-70c281473723" />
+
+---
+
+<img width="1919" height="977" alt="Screenshot 2025-10-18 124523" src="https://github.com/user-attachments/assets/da6d9f8f-bfbd-4560-b5ce-72396ffa9dfa" />
+
+---
+<img width="1919" height="969" alt="Screenshot 2025-10-18 133123" src="https://github.com/user-attachments/assets/cb8b0bf4-1e8c-4c13-85d8-e490b7a9b5bd" />
+
+---
+<img width="1919" height="976" alt="Screenshot 2025-10-18 133949" src="https://github.com/user-attachments/assets/0b70c21a-b5c6-4857-a350-8c1bc6432cf6" />
+
+---
+
+
+
 
 **Result:** All Lambda functions tested successfully inside AWS Lambda Console.
 
