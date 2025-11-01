@@ -31,6 +31,8 @@ DynamoDB (ItemsTable)
    ↓
 CloudWatch (Logs & Metrics)
 ```
+<img width="1536" height="1024" alt="AWS CRUD API high level arcitecture diagram" src="https://github.com/user-attachments/assets/746f3881-2e52-4edf-acbb-b595b12bb7bc" />
+
 
 ---
 
