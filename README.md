@@ -11,9 +11,8 @@ It supports Create, Read, Update, and Delete operations, all triggered through A
 - **Amazon API Gateway** – To expose RESTful API endpoints.
 - **Amazon DynamoDB** – NoSQL database for storing data.
 - **AWS IAM** – To manage secure permissions for Lambda.
-- **CloudFormation / Terraform (Optional)** – For Infrastructure as Code (IaC).
 - **Amazon CloudWatch** – For logging and monitoring.
-- **Amazon SNS (Optional)** – For alert notifications.
+- **Amazon SNS** – For alert notifications.
 
 ---
 
@@ -55,12 +54,11 @@ Below is the **exact workflow** we followed to build this project from scratch:
 
 ---
 
-**Result:** DynamoDB table ready to store items.
----
 <img width="1919" height="971" alt="Screenshot 2025-10-18 114457" src="https://github.com/user-attachments/assets/092e88ca-5cfa-4b49-b45b-c598a79e7ecc" />
 
 
 ---
+**Result:-** DynamoDB table ready to store items.
 
 ---
 
@@ -84,7 +82,7 @@ Below is the **exact workflow** we followed to build this project from scratch:
 ---
 
 
-**Result:** A secure role with DynamoDB & CloudWatch permissions created.
+**Result:-** A secure role with DynamoDB & CloudWatch permissions created.
 
 ---
 
@@ -122,7 +120,7 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
 
 
 
-**Result:** All Lambda functions tested successfully inside AWS Lambda Console.
+**Result:-** All Lambda functions tested successfully inside AWS Lambda Console.
 
 ---
 
@@ -137,6 +135,30 @@ Each Lambda uses **Python (boto3)** to interact with DynamoDB.
   - `PUT` → Integrate with `UpdateItemFunction`
   - `DELETE` → Integrate with `DeleteItemFunction`
 - Enable **Lambda Proxy Integration** for all.
+
+---
+<img width="1919" height="977" alt="Screenshot 2025-10-18 135748" src="https://github.com/user-attachments/assets/c0e24a5c-b7b7-4b70-9f6e-ddb720810d1c" />
+
+---
+<img width="1919" height="973" alt="Screenshot 2025-10-18 140759" src="https://github.com/user-attachments/assets/bd021e9d-f03b-4530-8c07-8b219cb1d451" />
+
+---
+<img width="1919" height="972" alt="Screenshot 2025-10-18 140851" src="https://github.com/user-attachments/assets/6e721401-da41-485e-ba38-8f9dd11e6561" />
+
+---
+<img width="1919" height="977" alt="Screenshot 2025-10-18 141118" src="https://github.com/user-attachments/assets/ca6d2eed-54e8-4619-87ed-43da4ea732a5" />
+
+---
+<img width="1919" height="960" alt="Screenshot 2025-10-18 142222" src="https://github.com/user-attachments/assets/4de07061-493a-45f3-9eff-03720ed41464" />
+
+---
+<img width="1919" height="978" alt="Screenshot 2025-10-18 142339" src="https://github.com/user-attachments/assets/d906b2e9-af71-4fd4-91e8-49c3f2afa7e3" />
+
+---
+<img width="1919" height="974" alt="Screenshot 2025-10-18 142549" src="https://github.com/user-attachments/assets/639ad5d0-d4d5-4b86-b34a-2d659c30c24f" />
+
+---
+
 
 **Result:** API Gateway connected with all Lambda functions.
 
