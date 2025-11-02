@@ -223,40 +223,108 @@ Use the following endpoints:
 
 ---
 
-### **7️) Add Monitoring & Alerts using Amazon CloudWatch and SNS**
+## ☁️ Step 7: Add Monitoring & Alerts using CloudWatch and SNS
 
-Monitoring and alerting are crucial for production-grade systems.  
-Here’s how we implemented monitoring and alerts in this project:
-
-#### **Step 1: Enable CloudWatch Logs for Lambda**
-- Lambda automatically sends logs to **CloudWatch** after every invocation.
-- You can view them in **CloudWatch → Log groups → /aws/lambda/<FunctionName>**.
-
-#### **Step 2: Create an SNS Topic for Alerts**
-1. Go to **AWS SNS → Create Topic → Standard type**.  
-2. Name it `LambdaErrorAlerts` and click **Create**.  
-3. Under the topic, click **Create subscription** → choose `Email` as protocol → enter your email.  
-4. Confirm the subscription from your inbox.
-
-#### **Step 3: Create CloudWatch Alarm**
-1. Go to **CloudWatch → Alarms → Create Alarm → Select metric**.  
-2. Choose:
-   ```
-   Lambda → By Function Name → <Your Function> → Errors
-   ```
-3. Click **Select metric**, then configure:
-   - **Threshold type:** Static  
-   - **Whenever Errors ≥ 1 for 1 datapoint**  
-4. Under **Actions**, choose **In alarm → Send notification to → LambdaErrorAlerts**.  
-5. Name your alarm (e.g., `LambdaErrorAlarm-CreateItemFunction`) and create it.
-
-#### **Step 4: Test the Alarm**
-- Trigger an intentional Lambda error (e.g., send invalid input through Postman).  
-- Within minutes, you’ll receive an **email alert** from SNS.
-
-✅ **Result:** The system now automatically monitors all functions and sends alerts on failures.
+Monitoring and alerting are crucial for production-grade systems. Below are the exact steps to enable logging, monitoring, and alert notifications for your Lambda functions.
 
 ---
+
+### PART 1 — Enable and View **CloudWatch Logs** for Lambda
+
+Every Lambda automatically sends logs to **CloudWatch**, but let’s confirm and check them.
+
+#### ✅ Steps:
+
+1. Go to **AWS Console → Lambda → your function (e.g., CreateItemFunction)**  
+2. Scroll down to **Monitor → View logs in CloudWatch**  
+3. You’ll see a log group like:  
+   ```
+   /aws/lambda/CreateItemFunction
+   ```  
+4. Inside this log group, you can open individual **Log Streams** to view:
+   - Start and end time of Lambda invocation  
+   - Any `print()` or `console.log()` outputs  
+   - Error messages if your Lambda failed  
+
+📘 **Tip:**  
+If you want to log messages manually inside your Lambda, use:
+
+```python
+import logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+def lambda_handler(event, context):
+    logger.info("Received event: %s", event)
+    # your logic...
+```
+
+✅ **Result:**  
+Your Lambda is already logging to CloudWatch automatically.  
+Now let’s turn those logs into **alerts**.
+
+---
+
+### 📢 PART 2 — Create a CloudWatch Alarm + SNS Email Alert
+
+This will send you an email when your Lambda fails (e.g., due to an exception or timeout).
+
+---
+
+### 🧭 Step-by-step
+
+#### **1️⃣ Create an SNS Topic**
+
+1. Go to **AWS Console → SNS → Topics → Create Topic**
+2. Choose **Standard** type
+3. Name it something like:
+   ```
+   LambdaErrorAlerts
+   ```
+4. Click **Create topic**
+
+---
+
+#### **2️⃣ Subscribe to the Topic**
+
+1. After creating the topic → Click on it → **Create Subscription**
+2. Protocol → `Email`
+3. Endpoint → Enter your email address (the one you want alerts on)
+4. Check your inbox and click **Confirm subscription**
+
+✅ Once confirmed, your status will show as **Confirmed** in the SNS dashboard.
+
+---
+
+#### **3️⃣ Create a CloudWatch Alarm for Lambda**
+
+1. Go to **AWS Console → CloudWatch → Alarms → All Alarms → Create alarm**
+2. Choose **Select metric**
+3. Choose:
+   ```
+   Lambda Metrics → By Function Name → <YourFunctionName> → Errors
+   ```
+4. Click **Select metric**
+5. Under **Conditions**, set:
+   - Threshold type → Static  
+   - Whenever `Errors` is **≥ 1** for **1 datapoint**
+6. Under **Actions → Alarm state trigger → In Alarm**, select:
+   - **Send a notification to → LambdaErrorAlerts**
+7. Give it a name:
+   ```
+   LambdaErrorAlarm-CreateItemFunction
+   ```
+8. Click **Create Alarm**
+
+✅ Repeat this for your other functions if you wish (Get, Update, Delete).
+
+---
+
+✅ **Final Result:**  
+Your system now automatically sends **email alerts** whenever any Lambda function fails.
+
+---
+
 
 ## Project Highlights
 
