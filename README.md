@@ -223,14 +223,38 @@ Use the following endpoints:
 
 ---
 
-### **7️) Add Monitoring & Alerts**
+### **7️) Add Monitoring & Alerts using Amazon CloudWatch and SNS**
 
-- **CloudWatch Logs:** Automatically receives Lambda logs.
-- **CloudWatch Alarms:** Send alerts for failures or high latency.
-- **Amazon SNS:** For email notifications.
+Monitoring and alerting are crucial for production-grade systems.  
+Here’s how we implemented monitoring and alerts in this project:
 
-**Result:** Monitoring and alerting integrated successfully.
+#### **Step 1: Enable CloudWatch Logs for Lambda**
+- Lambda automatically sends logs to **CloudWatch** after every invocation.
+- You can view them in **CloudWatch → Log groups → /aws/lambda/<FunctionName>**.
 
+#### **Step 2: Create an SNS Topic for Alerts**
+1. Go to **AWS SNS → Create Topic → Standard type**.  
+2. Name it `LambdaErrorAlerts` and click **Create**.  
+3. Under the topic, click **Create subscription** → choose `Email` as protocol → enter your email.  
+4. Confirm the subscription from your inbox.
+
+#### **Step 3: Create CloudWatch Alarm**
+1. Go to **CloudWatch → Alarms → Create Alarm → Select metric**.  
+2. Choose:
+   ```
+   Lambda → By Function Name → <Your Function> → Errors
+   ```
+3. Click **Select metric**, then configure:
+   - **Threshold type:** Static  
+   - **Whenever Errors ≥ 1 for 1 datapoint**  
+4. Under **Actions**, choose **In alarm → Send notification to → LambdaErrorAlerts**.  
+5. Name your alarm (e.g., `LambdaErrorAlarm-CreateItemFunction`) and create it.
+
+#### **Step 4: Test the Alarm**
+- Trigger an intentional Lambda error (e.g., send invalid input through Postman).  
+- Within minutes, you’ll receive an **email alert** from SNS.
+
+✅ **Result:** The system now automatically monitors all functions and sends alerts on failures.
 
 ---
 
