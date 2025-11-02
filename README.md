@@ -293,7 +293,7 @@ This will send me an email when Lambda fails (e.g., due to an exception or timeo
 3. Endpoint → Enter your email address (the one you want alerts on)
 4. Check your inbox and click **Confirm subscription**
 
-Once confirmed, your status will show as **Confirmed** in the SNS dashboard.
+Once confirmed, the status will show as **Confirmed** in the SNS dashboard.
 
 ---
 <img width="1919" height="969" alt="Screenshot 2025-11-01 233845" src="https://github.com/user-attachments/assets/fa84201a-d03b-4649-8521-825341555b7f" />
@@ -303,7 +303,7 @@ Once confirmed, your status will show as **Confirmed** in the SNS dashboard.
 
 ---
 
-#### ** Create a CloudWatch Alarm for Lambda**
+#### **Create a CloudWatch Alarm for Lambda**
 
 1. Go to **AWS Console → CloudWatch → Alarms → All Alarms → Create alarm**
 2. Choose **Select metric**
@@ -323,7 +323,7 @@ Once confirmed, your status will show as **Confirmed** in the SNS dashboard.
    ```
 8. Click **Create Alarm**
 
-We can repeat this for your other functions if you wish (Get, Update, Delete).
+We can repeat this for your other functions too(Get, Update, Delete).
 
 ---
 <img width="1919" height="973" alt="Screenshot 2025-11-01 234251" src="https://github.com/user-attachments/assets/b76c3493-a172-46c5-943b-9b1fe0b6d30b" />
@@ -342,8 +342,6 @@ We can repeat this for your other functions if you wish (Get, Update, Delete).
 
 ---
 <img width="1919" height="972" alt="Screenshot 2025-11-02 002010" src="https://github.com/user-attachments/assets/6cd18368-2234-41e1-8286-99e859209509" />
-
----
 
 
 ---
